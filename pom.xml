@@ -7,12 +7,12 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <xbatis.version>1.8.9-M3</xbatis.version>
+        <xbatis.version>1.8.9</xbatis.version>
     </properties>
 
     <groupId>cn.xbatis</groupId>
     <artifactId>xbatis-spring-boot-demo</artifactId>
-    <version>1.8.9-M3</version>
+    <version>1.8.9</version>
 
     <dependencyManagement>
         <dependencies>
