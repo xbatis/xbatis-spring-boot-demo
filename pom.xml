@@ -19,7 +19,7 @@
             <dependency>
                 <groupId>cn.xbatis</groupId>
                 <artifactId>xbatis-spring-boot-parent</artifactId>
-                <version>1.9.3-M3-spring-boot4</version>
+                <version>1.9.3-spring-boot4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
