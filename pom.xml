@@ -7,7 +7,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <xbatis.version>1.9.5-M1</xbatis.version>
+        <xbatis.version>1.9.5</xbatis.version>
     </properties>
 
     <groupId>cn.xbatis</groupId>
