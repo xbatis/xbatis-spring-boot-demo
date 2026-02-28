@@ -2,6 +2,7 @@ package cn.xbatis.spring.boot.demo.controller;
 
 import cn.xbatis.core.mybatis.mapper.context.Pager;
 import cn.xbatis.spring.boot.demo.DO.SysUser;
+import cn.xbatis.spring.boot.demo.mapper.MybatisBasicMapper;
 import cn.xbatis.spring.boot.demo.mapper.SysUserMapper;
 import cn.xbatis.spring.boot.demo.service.SysUserService;
 import cn.xbatis.spring.boot.demo.vo.SysUser2Vo;
@@ -26,6 +27,9 @@ public class SysUserController {
 
     @Resource
     private SysUserMapper sysUserMapper;
+
+    @Resource
+    private MybatisBasicMapper mybatisBasicMapper;
 
     @RequestMapping("/xmlPaging")
     public Pager<SysUser> xmlPaging() {

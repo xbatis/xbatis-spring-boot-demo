@@ -13,7 +13,7 @@ public class XbatisConfig {
     public ConfigurationCustomizer configurationCustomizer() {
         return (configuration) -> {
             //设置单Mapper的类
-            XbatisGlobalConfig.setSingleMapperClass(MybatisBasicMapper.class);
+            //XbatisGlobalConfig.setSingleMapperClass(MybatisBasicMapper.class);
         };
     }
 
