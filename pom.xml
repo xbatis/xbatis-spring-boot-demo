@@ -19,7 +19,7 @@
             <dependency>
                 <groupId>cn.xbatis</groupId>
                 <artifactId>xbatis-spring-boot-parent</artifactId>
-                <version>1.9.8-M3-spring-boot4</version>
+                <version>1.9.8-spring-boot4</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -63,6 +63,7 @@
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
+            <version>3.9.1</version>
         </dependency>
 
     </dependencies>
