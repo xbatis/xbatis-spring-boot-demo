@@ -4,12 +4,34 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.xbatis.spring.boot.demo.mapper.SysUserMapper">
 
-    <resultMap id="sysUser" type="cn.xbatis.spring.boot.demo.DO.SysUser">
+    <resultMap id="sysUser" type="cn.xbatis.spring.boot.demo.DO.SysUser" extends="$xbatis">
         <id property="id" column="id"/>
-
+        <result property="roleId" column="role_id2"/>
     </resultMap>
 
     <select id="getOne1" resultMap="sysUser">
-        select id,role_id roleId,name,create_time from sys_user t limit 1
+        select id, role_id role_id2, name, create_time
+        from sys_user t
+        limit 1
+    </select>
+
+    <select id="list2" resultMap="sysUser">
+        select id, role_id role_id2, name, create_time
+        from sys_user t
+        where id > #{value}
+    </select>
+
+    <select id="list3" resultMap="sysUser">
+        select id, role_id role_id2, name, create_time
+        from sys_user t
+        where id > #{arg0}
+          and id > #{id2}
+    </select>
+
+    <select id="list4" resultMap="sysUser">
+        select id, role_id roleId, name, create_time
+        from sys_user t
+        where ${arg0.whereScript}
+          and ${id2.whereScript}
     </select>
 </mapper>

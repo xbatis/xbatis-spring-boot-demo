@@ -6,6 +6,7 @@ import cn.xbatis.spring.boot.demo.service.SysUserService;
 import cn.xbatis.spring.boot.demo.vo.SysUser2Vo;
 import cn.xbatis.spring.boot.demo.vo.SysUser3Vo;
 import cn.xbatis.spring.boot.demo.vo.SysUserVo;
+import com.github.pagehelper.PageInfo;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RequestMapping("/sys/user")
 @RestController
@@ -47,6 +49,14 @@ public class SysUserController {
     @RequestMapping("/get")
     public SysUser get(Integer id) {
         return sysUserService.get(id);
+    }
+
+    @RequestMapping("/pagerHelperTest")
+    public PageInfo pagerHelperTest() {
+        List list = sysUserService.pagerHelperTest();
+        // 封装分页信息
+        return new PageInfo<>(list);
+
     }
 
     @RequestMapping("/info/{id}")

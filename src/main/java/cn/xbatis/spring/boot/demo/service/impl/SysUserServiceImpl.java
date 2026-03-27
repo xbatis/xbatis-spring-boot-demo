@@ -6,10 +6,12 @@ import cn.xbatis.spring.boot.demo.dao.SysUserDao;
 import cn.xbatis.spring.boot.demo.mapper.SysUserMapper;
 import cn.xbatis.spring.boot.demo.service.SysUserService;
 import cn.xbatis.spring.boot.demo.vo.SysUserVo;
+import com.github.pagehelper.PageHelper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class SysUserServiceImpl implements SysUserService {
@@ -50,5 +52,11 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public <T> Pager<T> search(String name, Pager<T> pager, Class<T> returnType) {
         return sysUserDao.search(name, pager, returnType);
+    }
+
+    @Override
+    public List pagerHelperTest() {
+        PageHelper.startPage(1, 20);
+        return sysUserDao.pagerHelperTest();
     }
 }
