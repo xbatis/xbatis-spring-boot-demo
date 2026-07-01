@@ -18,4 +18,10 @@ public interface SysUserDao extends Dao<SysUser, Integer> {
     SysUserVo getUserInfo(Integer id);
 
     <T> Pager<T> search(String name, Pager<T> pager, Class<T> returnType);
+
+    int save(SysUser sysUser);
+
+    int update(SysUser sysUser);
+
+    int deleteById(Integer id);
 }
