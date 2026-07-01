@@ -1,0 +1,1 @@
+insert into sys_role(id,name) values (1,'xxx')

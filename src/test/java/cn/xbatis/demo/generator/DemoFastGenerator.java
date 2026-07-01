@@ -14,7 +14,7 @@ public class DemoFastGenerator {
         DataSource dataSource = new EmbeddedDatabaseBuilder()
                 .setName("test_db")
                 .setType(EmbeddedDatabaseType.H2)
-                .addScript("schema.sql")
+                .addScript("data.sql")
                 .build();
 
         new FastGenerator(new GeneratorConfig(
