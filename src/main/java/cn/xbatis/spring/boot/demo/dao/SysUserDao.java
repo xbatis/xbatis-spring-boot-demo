@@ -22,4 +22,10 @@ public interface SysUserDao extends Dao<SysUser, Integer> {
     <T> Pager<T> search(String name, Pager<T> pager, Class<T> returnType);
 
     List pagerHelperTest();
+
+    int save(SysUser sysUser);
+
+    int update(SysUser sysUser);
+
+    int deleteById(Integer id);
 }

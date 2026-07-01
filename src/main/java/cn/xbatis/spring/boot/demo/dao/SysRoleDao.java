@@ -15,4 +15,10 @@ import cn.xbatis.spring.boot.demo.DO.SysRole;
 public interface SysRoleDao extends Dao<SysRole, Integer> {
 
     Pager<SysRole> search(String name, Pager<SysRole> pager);
+
+    int save(SysRole sysRole);
+
+    int update(SysRole sysRole);
+
+    int deleteById(Integer id);
 }
