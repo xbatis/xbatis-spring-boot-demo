@@ -20,6 +20,6 @@ public class SysUser {
     @ForeignKey(SysRole.class)
     private Integer roleId;
 
-    @TableField
+    @TableField(defaultValue = "{NOW}")
     private LocalDateTime createTime;
 }
