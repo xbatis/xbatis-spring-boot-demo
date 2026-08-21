@@ -17,7 +17,7 @@ public class SysRole {
 
     private String name;
 
-    @TableField(update = false)
+    @TableField(update = false, defaultValue = "{NOW}")
     private LocalDateTime createTime;
 
     @Ignore
