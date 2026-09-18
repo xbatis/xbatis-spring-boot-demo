@@ -3,6 +3,7 @@ spring:
     aop:
       enabled: true
       order: 1
+      mapper: true
     p6spy: true
     jdbc-config-decrypt: false
     primary: master
