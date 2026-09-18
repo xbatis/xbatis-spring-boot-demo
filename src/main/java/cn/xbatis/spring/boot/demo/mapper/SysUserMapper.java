@@ -1,6 +1,7 @@
 package cn.xbatis.spring.boot.demo.mapper;
 
 import cn.xbatis.core.mybatis.mapper.MybatisMapper;
+import cn.xbatis.datasource.routing.DS;
 import cn.xbatis.spring.boot.demo.DO.SysUser;
 import db.sql.api.impl.cmd.struct.Where;
 import org.apache.ibatis.annotations.Flush;
@@ -20,6 +21,7 @@ import java.util.List;
 @Mapper
 public interface SysUserMapper extends MybatisMapper<SysUser> {
 
+    @DS("master")
     SysUser getOne1();
 
     @Flush
